@@ -8,13 +8,9 @@ from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.utils.data import DataLoader
 
 
-def log(step, max_steps, lr, metrics, mode="train"):
+def log(step, max_steps, lr, metrics):
     metrics_print = " - ".join([f"{m}: {v[-1]:.3f}" for m, v in metrics.items()])
-
-    if mode == "train":
-        print(f"Step {step + 1}/{max_steps} - LR:{lr:.4f} -", metrics_print, end="\r")
-    if mode == "eval":
-        print(f"\n\Step {step + 1}/{max_steps} -", metrics_print)
+    print(f"Step {step + 1}/{max_steps} - LR:{lr:.4f} -", metrics_print, end="\r")
 
 
 def train(
@@ -55,20 +51,3 @@ def train(
         print()
 
     return metrics_tracker
-
-
-@torch.inference_mode()
-def evaluate(model: Module, dl_val: DataLoader, device: torch.device) -> float:
-    model.eval()
-    running_loss = 0.0
-    num_steps = 0
-
-    for sequence, labels in dl_val:
-        sequence, labels = sequence.to(device), labels.to(device)
-        logits = model(sequence)
-        loss = F.cross_entropy(logits.view(-1, logits.size(-1)), labels.view(-1), ignore_index=-1)
-
-        running_loss += loss.cpu().item()
-        num_steps += 1
-
-    return running_loss / num_steps
