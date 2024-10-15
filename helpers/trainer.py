@@ -35,11 +35,26 @@ def train(
         for step, (inputs, labels) in enumerate(dl_train):
             optimizer.zero_grad(set_to_none=True)
 
+            # Print parameters and their requires_grad status
+            print("Before forward pass:")
+            for name, param in model.named_parameters():
+                print(f"Parameter {name} shape: {param.shape}, requires_grad: {param.requires_grad}")
+
             inputs, labels = inputs.to(device), labels.to(device)
             logits = model(inputs)
 
+            # Print parameters and their requires_grad status 
+            print("After forward pass:")
+            for name, param in model.named_parameters():
+                print(f"Parameter {name} shape: {param.shape}, requires_grad: {param.requires_grad}")
+
             loss = F.cross_entropy(logits.view(-1, logits.size(-1)), labels.view(-1), ignore_index=-1)
             loss.backward()
+
+            # Print parameters and their requires_grad status
+            print("Before optimizer step:")
+            for name, param in model.named_parameters():
+                print(f"Parameter {name} shape: {param.shape}, requires_grad: {param.requires_grad}")
 
             optimizer.step()
             scheduler.step()

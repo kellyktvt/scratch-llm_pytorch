@@ -1,0 +1,108 @@
+Before forward pass:
+token_embedding shape: (4096, 256), requires_grad: True
+0.norm_attn shape: (256,), requires_grad: True
+0.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+0.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+0.norm_ffn shape: (256,), requires_grad: True
+0.feed_forward shape: (1024, 256), requires_grad: True
+0.feed_forward shape: (2048, 1024), requires_grad: True
+0.feed_forward.bias shape: (2048,), requires_grad: True
+0.feed_forward shape: (256, 1024), requires_grad: True
+1.norm_attn shape: (256,), requires_grad: True
+1.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+1.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+1.norm_ffn shape: (256,), requires_grad: True
+1.feed_forward shape: (1024, 256), requires_grad: True
+1.feed_forward shape: (2048, 1024), requires_grad: True
+1.feed_forward.bias shape: (2048,), requires_grad: True
+1.feed_forward shape: (256, 1024), requires_grad: True
+2.norm_attn shape: (256,), requires_grad: True
+2.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+2.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+2.norm_ffn shape: (256,), requires_grad: True
+2.feed_forward shape: (1024, 256), requires_grad: True
+2.feed_forward shape: (2048, 1024), requires_grad: True
+2.feed_forward.bias shape: (2048,), requires_grad: True
+2.feed_forward shape: (256, 1024), requires_grad: True
+3.norm_attn shape: (256,), requires_grad: True
+3.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+3.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+3.norm_ffn shape: (256,), requires_grad: True
+3.feed_forward shape: (1024, 256), requires_grad: True
+3.feed_forward shape: (2048, 1024), requires_grad: True
+3.feed_forward.bias shape: (2048,), requires_grad: True
+3.feed_forward shape: (256, 1024), requires_grad: True
+norm shape: (256,), requires_grad: True
+projection_head.bias shape: (4096), requires_grad: True
+After forward pass:
+token_embedding shape: (4096, 256), requires_grad: True
+0.norm_attn shape: (256,), requires_grad: True
+0.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+0.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+0.norm_ffn shape: (256,), requires_grad: True
+0.feed_forward shape: (1024, 256), requires_grad: True
+0.feed_forward shape: (2048, 1024), requires_grad: True
+0.feed_forward.bias shape: (2048,), requires_grad: True
+0.feed_forward shape: (256, 1024), requires_grad: True
+1.norm_attn shape: (256,), requires_grad: True
+1.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+1.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+1.norm_ffn shape: (256,), requires_grad: True
+1.feed_forward shape: (1024, 256), requires_grad: True
+1.feed_forward shape: (2048, 1024), requires_grad: True
+1.feed_forward.bias shape: (2048,), requires_grad: True
+1.feed_forward shape: (256, 1024), requires_grad: True
+2.norm_attn shape: (256,), requires_grad: True
+2.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+2.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+2.norm_ffn shape: (256,), requires_grad: True
+2.feed_forward shape: (1024, 256), requires_grad: True
+2.feed_forward shape: (2048, 1024), requires_grad: True
+2.feed_forward.bias shape: (2048,), requires_grad: True
+2.feed_forward shape: (256, 1024), requires_grad: True
+3.norm_attn shape: (256,), requires_grad: True
+3.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+3.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+3.norm_ffn shape: (256,), requires_grad: True
+3.feed_forward shape: (1024, 256), requires_grad: True
+3.feed_forward shape: (2048, 1024), requires_grad: True
+3.feed_forward.bias shape: (2048,), requires_grad: True
+3.feed_forward shape: (256, 1024), requires_grad: True
+norm shape: (256,), requires_grad: True
+projection_head.bias shape: (4096), requires_grad: True
+Before optimizer step:
+token_embedding shape: (4096, 256), requires_grad: True
+0.norm_attn shape: (256,), requires_grad: True
+0.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+0.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+0.norm_ffn shape: (256,), requires_grad: True
+0.feed_forward shape: (1024, 256), requires_grad: True
+0.feed_forward shape: (2048, 1024), requires_grad: True
+0.feed_forward.bias shape: (2048,), requires_grad: True
+0.feed_forward shape: (256, 1024), requires_grad: True
+1.norm_attn shape: (256,), requires_grad: True
+1.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+1.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+1.norm_ffn shape: (256,), requires_grad: True
+1.feed_forward shape: (1024, 256), requires_grad: True
+1.feed_forward shape: (2048, 1024), requires_grad: True
+1.feed_forward.bias shape: (2048,), requires_grad: True
+1.feed_forward shape: (256, 1024), requires_grad: True
+2.norm_attn shape: (256,), requires_grad: True
+2.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+2.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+2.norm_ffn shape: (256,), requires_grad: True
+2.feed_forward shape: (1024, 256), requires_grad: True
+2.feed_forward shape: (2048, 1024), requires_grad: True
+2.feed_forward.bias shape: (2048,), requires_grad: True
+2.feed_forward shape: (256, 1024), requires_grad: True
+3.norm_attn shape: (256,), requires_grad: True
+3.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+3.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+3.norm_ffn shape: (256,), requires_grad: True
+3.feed_forward shape: (1024, 256), requires_grad: True
+3.feed_forward shape: (2048, 1024), requires_grad: True
+3.feed_forward.bias shape: (2048,), requires_grad: True
+3.feed_forward shape: (256, 1024), requires_grad: True
+norm shape: (256,), requires_grad: True
+projection_head.bias shape: (4096), requires_grad: True

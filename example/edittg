@@ -1,0 +1,144 @@
+Before forward pass:
+token_embedding shape: (4096, 256), requires_grad: True
+0.norm_attn shape: (256,), requires_grad: True
+# 0.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 0.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+0.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+0.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 0.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: True
+0.norm_ffn shape: (256,), requires_grad: True
+0.feed_forward shape: (1024, 256), requires_grad: True
+0.feed_forward shape: (2048, 1024), requires_grad: True
+0.feed_forward.bias shape: (2048,), requires_grad: True
+0.feed_forward shape: (256, 1024), requires_grad: True
+1.norm_attn shape: (256,), requires_grad: True
+# 1.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 1.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+1.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+1.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 1.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: True
+1.norm_ffn shape: (256,), requires_grad: True
+1.feed_forward shape: (1024, 256), requires_grad: True
+1.feed_forward shape: (2048, 1024), requires_grad: True
+1.feed_forward.bias shape: (2048,), requires_grad: True
+1.feed_forward shape: (256, 1024), requires_grad: True
+2.norm_attn shape: (256,), requires_grad: True
+# 2.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 2.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+2.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+2.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 2.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: True
+2.norm_ffn shape: (256,), requires_grad: True
+2.feed_forward shape: (1024, 256), requires_grad: True
+2.feed_forward shape: (2048, 1024), requires_grad: True
+2.feed_forward.bias shape: (2048,), requires_grad: True
+2.feed_forward shape: (256, 1024), requires_grad: True
+3.norm_attn shape: (256,), requires_grad: True
+# 3.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 3.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+3.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+3.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 3.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: True
+3.norm_ffn shape: (256,), requires_grad: True
+3.feed_forward shape: (1024, 256), requires_grad: True
+3.feed_forward shape: (2048, 1024), requires_grad: True
+3.feed_forward.bias shape: (2048,), requires_grad: True
+3.feed_forward shape: (256, 1024), requires_grad: True
+norm shape: (256,), requires_grad: True
+##### projection_head shape: (4096, 256), requires_grad: True
+projection_head.bias shape: (4096,), requires_grad: True
+After forward pass:
+token_embedding shape: (4096, 256), requires_grad: True
+##### token_embedding.arange shape: (1, 1, 4096, 1), type: dtypes.int, requires_grad: False
+0.norm_attn shape: (256,), requires_grad: True
+# 0.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 0.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+0.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+0.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 0.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: False
+0.norm_ffn shape: (256,), requires_grad: True
+0.feed_forward shape: (1024, 256), requires_grad: True
+0.feed_forward shape: (2048, 1024), requires_grad: True
+0.feed_forward.bias shape: (2048,), requires_grad: True
+0.feed_forward shape: (256, 1024), requires_grad: True
+1.norm_attn shape: (256,), requires_grad: True
+# 1.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 1.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+1.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+1.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 1.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: False
+1.norm_ffn shape: (256,), requires_grad: True
+1.feed_forward shape: (1024, 256), requires_grad: True
+1.feed_forward shape: (2048, 1024), requires_grad: True
+1.feed_forward.bias shape: (2048,), requires_grad: True
+1.feed_forward shape: (256, 1024), requires_grad: True
+2.norm_attn shape: (256,), requires_grad: True
+# 2.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 2.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+2.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+2.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 2.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: False
+2.norm_ffn shape: (256,), requires_grad: True
+2.feed_forward shape: (1024, 256), requires_grad: True
+2.feed_forward shape: (2048, 1024), requires_grad: True
+2.feed_forward.bias shape: (2048,), requires_grad: True
+2.feed_forward shape: (256, 1024), requires_grad: True
+3.norm_attn shape: (256,), requires_grad: True
+# 3.multihead_attn.positional_encoding.position_cos shape: (1, 1, 128, 32), requires_grad: True
+# 3.multihead_attn.positional_encoding.position_sin shape: (1, 1, 128, 32), requires_grad: True
+3.multihead_attn.proj_qkv shape: (768, 256), requires_grad: True
+3.multihead_attn.proj_out shape: (256, 256), requires_grad: True
+# 3.multihead_attn.causal_mask shape: (128, 128), type: dtypes.bool, requires_grad: False
+3.norm_ffn shape: (256,), requires_grad: True
+3.feed_forward shape: (1024, 256), requires_grad: True
+3.feed_forward shape: (2048, 1024), requires_grad: True
+3.feed_forward.bias shape: (2048,), requires_grad: True
+3.feed_forward shape: (256, 1024), requires_grad: True
+norm shape: (256,), requires_grad: True
+##### projection_head shape: (4096, 256), requires_grad: True
+projection_head.bias shape: (4096,), requires_grad: True
+Before optimizer step:
+token_embedding grad: <Tensor <LB METAL (4096, 256) float (<BinaryOps.ADD: 1>, None)> on METAL with grad None>
+0.norm_attn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.multihead_attn.positional_encoding.position_cos grad: None
+0.multihead_attn.positional_encoding.position_sin grad: None
+0.multihead_attn.proj_qkv grad: <Tensor <LB METAL (768, 256) float ShapeTracker(views=(View(shape=(768, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.multihead_attn.proj_out grad: <Tensor <LB METAL (256, 256) float ShapeTracker(views=(View(shape=(256, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.norm_ffn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.feed_forward grad: <Tensor <LB METAL (1024, 256) float ShapeTracker(views=(View(shape=(1024, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.feed_forward grad: <Tensor <LB METAL (2048, 1024) float ShapeTracker(views=(View(shape=(2048, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.feed_forward.bias grad: <Tensor <LB METAL (2048,) float ShapeTracker(views=(View(shape=(2048,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+0.feed_forward grad: <Tensor <LB METAL (256, 1024) float ShapeTracker(views=(View(shape=(256, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.norm_attn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.multihead_attn.positional_encoding.position_cos grad: None
+1.multihead_attn.positional_encoding.position_sin grad: None
+1.multihead_attn.proj_qkv grad: <Tensor <LB METAL (768, 256) float ShapeTracker(views=(View(shape=(768, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.multihead_attn.proj_out grad: <Tensor <LB METAL (256, 256) float ShapeTracker(views=(View(shape=(256, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.norm_ffn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.feed_forward grad: <Tensor <LB METAL (1024, 256) float ShapeTracker(views=(View(shape=(1024, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.feed_forward grad: <Tensor <LB METAL (2048, 1024) float ShapeTracker(views=(View(shape=(2048, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.feed_forward.bias grad: <Tensor <LB METAL (2048,) float ShapeTracker(views=(View(shape=(2048,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+1.feed_forward grad: <Tensor <LB METAL (256, 1024) float ShapeTracker(views=(View(shape=(256, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.norm_attn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.multihead_attn.positional_encoding.position_cos grad: None
+2.multihead_attn.positional_encoding.position_sin grad: None
+2.multihead_attn.proj_qkv grad: <Tensor <LB METAL (768, 256) float ShapeTracker(views=(View(shape=(768, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.multihead_attn.proj_out grad: <Tensor <LB METAL (256, 256) float ShapeTracker(views=(View(shape=(256, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.norm_ffn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.feed_forward grad: <Tensor <LB METAL (1024, 256) float ShapeTracker(views=(View(shape=(1024, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.feed_forward grad: <Tensor <LB METAL (2048, 1024) float ShapeTracker(views=(View(shape=(2048, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.feed_forward.bias grad: <Tensor <LB METAL (2048,) float ShapeTracker(views=(View(shape=(2048,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+2.feed_forward grad: <Tensor <LB METAL (256, 1024) float ShapeTracker(views=(View(shape=(256, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.norm_attn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.multihead_attn.positional_encoding.position_cos grad: None
+3.multihead_attn.positional_encoding.position_sin grad: None
+3.multihead_attn.proj_qkv grad: <Tensor <LB METAL (768, 256) float ShapeTracker(views=(View(shape=(768, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.multihead_attn.proj_out grad: <Tensor <LB METAL (256, 256) float ShapeTracker(views=(View(shape=(256, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.norm_ffn grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.feed_forward grad: <Tensor <LB METAL (1024, 256) float ShapeTracker(views=(View(shape=(1024, 256), strides=(256, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.feed_forward grad: <Tensor <LB METAL (2048, 1024) float ShapeTracker(views=(View(shape=(2048, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.feed_forward.bias grad: <Tensor <LB METAL (2048,) float ShapeTracker(views=(View(shape=(2048,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+3.feed_forward grad: <Tensor <LB METAL (256, 1024) float ShapeTracker(views=(View(shape=(256, 1024), strides=(1024, 1), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+norm grad: <Tensor <LB METAL (256,) float ShapeTracker(views=(View(shape=(256,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
+projection_head grad: <Tensor <LB METAL (4096, 256) float (<BinaryOps.ADD: 1>, None)> on METAL with grad None>
+projection_head.bias grad: <Tensor <LB METAL (4096,) float ShapeTracker(views=(View(shape=(4096,), strides=(1,), offset=0, mask=None, contiguous=True),))> on METAL with grad None>
